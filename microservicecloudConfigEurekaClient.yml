@@ -4,6 +4,8 @@ spring:
       - dev
 
 ---
+server: 
+ port: 7001
 
 spring: 
   profiles: dev
@@ -20,6 +22,8 @@ eureka:
       defaultZone: http://eureka7001.com:7001/eureka/
 
 ---
+server: 
+ port: 7001
 
 spring: 
   profiles: test
