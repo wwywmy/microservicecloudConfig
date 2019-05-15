@@ -13,7 +13,7 @@ spring:
    #driver-class-name: org.gjt.mm.mysql.Driver
    #driver-class-name: com.mysql.jdbc.Driver
    driver-class-name: com.mysql.cj.jdbc.Driver
-   url: jdbc:mysql://www.b.com:3306/springboot
+   url: jdbc:mysql://www.b.com:3306/springboot3
    username: root
    password: 123456
    dbcp2: 
