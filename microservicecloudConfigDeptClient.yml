@@ -1,0 +1,131 @@
+spring: 
+  profiles: 
+    active: 
+      - dev
+
+---
+spring: 
+ profiles: dev
+ application: 
+  name: microservercloudDept
+ datasource: 
+   type: com.alibaba.druid.pool.DruidDataSource
+   #driver-class-name: org.gjt.mm.mysql.Driver
+   #driver-class-name: com.mysql.jdbc.Driver
+   driver-class-name: com.mysql.cj.jdbc.Driver
+   url: jdbc:mysql://www.b.com:3306/springboot
+   username: root
+   password: 123456
+   dbcp2: 
+    min-idle: 5
+    initial-size: 5
+    max-total: 5
+    max-wait-millis: 200
+
+server: 
+ port: 8001
+
+ 
+mybatis: 
+ config-location: classpath:mybatis/mybatis.cfg.xml
+ type-aliases-package: com.abc.springcloud.entity
+ mapper-locations: classpath:mybatis/mapper/**/*.xml
+
+spring: 
+ application: 
+  name: microservercloudDept
+ datasource: 
+   type: com.alibaba.druid.pool.DruidDataSource
+   driver-class-name: com.mysql.cj.jdbc.Driver
+   url: jdbc:mysql://www.b.com:3306/springboot
+   username: root
+   password: 123456
+   dbcp2: 
+    min-idle: 5
+    initial-size: 5
+    max-total: 5
+    max-wait-millis: 200
+
+    
+eureka: 
+  client: 
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka
+  instance:
+    instance-id: microservercloudDept8001
+    prefer-ip-address: true
+    
+    
+info:
+  app: 
+   encoding: '@project.build.sourceEncoding@'
+  java: 
+    source: '@java.version@'
+    target: '@java.version@'
+  bulid: 
+    artifactId: '@project.artifactId@'
+    version: '@project.version@'
+
+---
+spring: 
+ profiles: test
+ application: 
+  name: microservercloudDept
+ datasource: 
+   type: com.alibaba.druid.pool.DruidDataSource
+   #driver-class-name: org.gjt.mm.mysql.Driver
+   #driver-class-name: com.mysql.jdbc.Driver
+   driver-class-name: com.mysql.cj.jdbc.Driver
+   url: jdbc:mysql://www.b.com:3306/springboot2
+   username: root
+   password: 123456
+   dbcp2: 
+    min-idle: 5
+    initial-size: 5
+    max-total: 5
+    max-wait-millis: 200
+
+server: 
+ port: 8001
+
+ 
+mybatis: 
+ config-location: classpath:mybatis/mybatis.cfg.xml
+ type-aliases-package: com.abc.springcloud.entity
+ mapper-locations: classpath:mybatis/mapper/**/*.xml
+
+spring: 
+ application: 
+  name: microservercloudDept
+ datasource: 
+   type: com.alibaba.druid.pool.DruidDataSource
+   driver-class-name: com.mysql.cj.jdbc.Driver
+   url: jdbc:mysql://www.b.com:3306/springboot
+   username: root
+   password: 123456
+   dbcp2: 
+    min-idle: 5
+    initial-size: 5
+    max-total: 5
+    max-wait-millis: 200
+
+    
+eureka: 
+  client: 
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka
+  instance:
+    instance-id: microservercloudDept8001
+    prefer-ip-address: true
+    
+    
+info:
+  app: 
+   encoding: '@project.build.sourceEncoding@'
+  java: 
+    source: '@java.version@'
+    target: '@java.version@'
+  bulid: 
+    artifactId: '@project.artifactId@'
+    version: '@project.version@'
+
